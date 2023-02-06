@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/http//yarwarr.github.io/socialMediaWeb/static/css/main.b62ea404.css",
+    "main.js": "/http//yarwarr.github.io/socialMediaWeb/static/js/main.87c72eb4.js",
+    "index.html": "/http//yarwarr.github.io/socialMediaWeb/index.html",
+    "main.b62ea404.css.map": "/http//yarwarr.github.io/socialMediaWeb/static/css/main.b62ea404.css.map",
+    "main.87c72eb4.js.map": "/http//yarwarr.github.io/socialMediaWeb/static/js/main.87c72eb4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b62ea404.css",
+    "static/js/main.87c72eb4.js"
+  ]
+}
