@@ -42,6 +42,9 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage });
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
@@ -67,7 +70,3 @@ mongoose
     // Post.insertMany(posts);
   })
   .catch((error) => console.log(`${error} did not connect`));
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
