@@ -53,9 +53,7 @@ app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
 /* MANGOOSE SETUP */
-app.get('*', ()=>{
-  
-})
+app.get("*", () => {});
 const PORT = process.env.PORT || 6001;
 mongoose
   .connect(process.env.MANGO_URL, {
@@ -70,10 +68,6 @@ mongoose
   })
   .catch((error) => console.log(`${error} did not connect`));
 
-
-  if(process.env.NODE_ENV==="production"){
-    app.use(express.static("client/build"))
-    app.get("*",(req,res)=>{
-      res.sendFile(path.resolve(__dirname,"client","build","index.html"))
-    })
-  }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
