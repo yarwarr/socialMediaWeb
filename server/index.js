@@ -53,6 +53,9 @@ app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
 /* MANGOOSE SETUP */
+app.get('*', ()=>{
+  
+})
 const PORT = process.env.PORT || 6001;
 mongoose
   .connect(process.env.MANGO_URL, {
